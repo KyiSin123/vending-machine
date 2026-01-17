@@ -1,0 +1,10 @@
+RewriteEngine On
+# Routes for clean URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^products(/.*)?$ products.php [QSA,L]
+RewriteRule ^logout/?$ logout.php [QSA,L]
+RewriteRule ^shop/?$ products.php [QSA,L]
+RewriteRule ^transactions(/.*)?$ products.php [QSA,L]
+RewriteRule ^cart(/.*)?$ products.php [QSA,L]
+RewriteRule ^api(/.*)?$ api/index.php [QSA,L]
